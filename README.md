@@ -104,6 +104,7 @@
    * smbd
    * pcap
    * mssqld
+   Unfortunately, there was no any payloads registered for Dionaea
    
    Next is a screenshot for Amun Honeypot:
    
@@ -121,21 +122,17 @@
    * ET CINS Active Threat Intelligence Poor Reputation IP TCP group 3
    * ET SCAN Suspicious inbound to MSSQL port 1433
    
-   
-   I've used mongoexpert to export data from the honeypots using the following command:
+   <b>Export: </b> I've used mongoexpert to export data from the honeypots using the following command:
    <kbd><img src="export.png" width="900"></kbd><br />
    
-   The .json file contains the information about the attacks, which inculdes protocol, port, ip address, honeypot name, timestamp, source port and identifier : 
+   The .json file contains the information about the attacks, which inculdes protocol, port, ip address, honeypot name, timestamp, source port and identifier (Dionaea example): 
    
    ```
    { "_id" : { "$oid" : "5ac40df9616a1e77b1380124" }, "protocol" : "pcap", "hpfeed_id" : { "$oid" : "5ac40df6616a1e77b1380123" }, "timestamp" : { "$date" : "2018-04-03T23:27:50.399+0000" }, "source_ip" : "77.72.82.92", "source_port" : 45355, "destination_port" : 21958, "identifier" : "dd62dccc-36e1-11e8-bf4a-42010a800002", "honeypot" : "dionaea" }
    ```
-   
+   There is  some additional information present for other honeypots with signature details of the scan methods:
+   ```
+   { "_id" : { "$oid" : "5ac40e0e616a1e77b138012e" }, "destination_ip" : "10.128.0.3", "protocol" : "TCP", "hpfeed_id" : { "$oid" : "5ac40e0c616a1e77b1380127" }, "timestamp" : { "$date" : "2018-04-03T23:28:12.080+0000" }, "source_ip" : "60.12.171.30", "snort" : { "priority" : 2, "header" : "1:2403384:39535", "classification" : 30, "signature" : "ET CINS Active Threat Intelligence Poor Reputation IP TCP group 43" }, "source_port" : 56929, "honeypot" : "snort", "identifier" : "d4809ba0-377f-11e8-bf4a-42010a800002", "sensor" : "d4809ba0-377f-11e8-bf4a-42010a800002", "destination_port" : 1433 }
+   ```
+   I was also trying different combinations to get more information using Mnemosyne and commands like --file, --hpfeed, --metadata, but the data was similar
 
-
-   
- 
-
-4. Any unresolved questions raised by the data collected
-
-   I was trying different combinations to locate the possibe malware using command like file, but there were no sufficient informatuon. It seems like for that period of time the machine was scanned, but never actualy tried to be exploited by malware
