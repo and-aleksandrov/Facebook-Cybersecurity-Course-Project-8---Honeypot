@@ -38,7 +38,7 @@
    ```
    $ gcloud beta compute firewall-rules create mhn-allow-honeypot --direction=INGRESS --priority=1000 --network=default --action=ALLOW --rules=all --source-ranges=0.0.0.0/0 --target-tags=mhn-honeypot
    ```
-   <img src="firewall.gif" width="800">
+   <img src="firewall.png" width="800">
    and creating the instance:
    ```
    $ gcloud compute instances create "mhn-honeypot-1" --machine-type "f1-micro" --subnet "default" --maintenance-policy "MIGRATE"  --scopes "https://www.googleapis.com/auth/devstorage.read_only","https://www.googleapis.com/auth/logging.write","https://www.googleapis.com/auth/monitoring.write","https://www.googleapis.com/auth/servicecontrol","https://www.googleapis.com/auth/service.management.readonly","https://www.googleapis.com/auth/trace.append" --tags "mhn-honeypot","http-server" --image "ubuntu-1404-trusty-v20171010" --image-project "ubuntu-os-cloud" --boot-disk-size "10" --boot-disk-type "pd-standard" --boot-disk-device-name "mhn-honeypot-1"
@@ -58,16 +58,16 @@
    ```
    wget "http://35.184.64.139/api/script/?text=true&script_id=2" -O deploy.sh && sudo bash deploy.sh http://35.184.64.139 1VEYNzcb
    ```
-   <img src="deploy.gif" width="800">
+   <img src="deploy.png" width="800">
 * Attach the honeypot
    To test the attack on the honeypot i've used nmap command and IP address of honeypot-1:
-   <img src="nmap.gif" width="800">
+   <img src="nmap.png" width="800">
    As we can see there are 13 open ports on the honeypot and 987 closed ones
    
 * To set up different types of honeypots I've repeated the last 3 steps except creating a firewall. I've replaced mhn-honeypot-1 with mhn-honeypot-2, mhn-honeypot-3 etc in the create instance command.
    When we go to the  ```mhn-admin``` admin panel using my ```35.184.64.139 ``` IP address and choose ```Sensors> View sensors``` we can see all deployed honeypots with details and the attack number
    I've creted the following types of Honeypots:
-   <img src="sensors.gif" width="800">
+   <img src="sensors.png" width="800">
    
 
    
