@@ -1,12 +1,12 @@
 # Facebook Cybersecurity Course Project 8: Honeypot
 
-Objective: Setup a honeypot and provide a working demonstration of its features.
+## Objective: Setup a honeypot and provide a working demonstration of its features.
 
-1. Overview & Setup | Which Honeypot(s) you deployed
+### 1. Overview & Setup | Which Honeypot(s) you deployed
 
-To deploy honeypots I've used Google Cloud. I've downloaded and installed Google Cloud Platform SDK so I was able to run ```gcloud``` from a command line.
+* To deploy honeypots I've used Google Cloud. I've downloaded and installed Google Cloud Platform SDK so I was able to run ```gcloud``` from a command line.
 
-For the VM i've used Ubuntu 14.04 with following open ports: 80, 3000, 10000. I've created the following firewall rules with command
+* For the VM i've used Ubuntu 14.04 with following open ports: 80, 3000, 10000. I've created the following firewall rules with command
 ``` 
 $ gcloud beta compute firewall-rules create mhn-allow-admin --direction=INGRESS --priority=1000 --network=default --action=ALLOW --rules=tcp:3000,tcp:10000 --source-ranges=0.0.0.0/0 --target-tags=mhn-admin
 ```
@@ -19,7 +19,7 @@ From the output we can notice the external ip address for access to the admin pa
 NAME         ZONE           MACHINE_TYPE  PREEMPTIBLE  INTERNAL_IP  EXTERNAL_IP    STATUS
 mhn-admin  us-central1-c  f1-micro                   10.128.0.6   35.184.64.139  RUNNING
 ```
-After the set-up was complete I've installed the MHN Admin application
+* After the set-up was complete I've installed the MHN Admin application
 ```
 $ gcloud compute ssh mhn-admin
 ...
@@ -31,6 +31,9 @@ $ cd mhn
 $ sudo ./install.sh
 ```
 During the installation I was asked multiple configuration questions, answers were either no, or default
+
+* Next step was to create a honeypot VM itself
+
 
 
 
