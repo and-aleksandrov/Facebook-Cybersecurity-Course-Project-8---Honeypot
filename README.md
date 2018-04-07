@@ -85,13 +85,15 @@
 
 ### 3. Summary of the data collected
    For several days period the the honeypots had the following number of attacks:
-   Honeypot | total attacks
-   --- | ---
-   Dionaea |  > 14000
-   Snort | 0
-   Wordpot | 0
-   Amun | 228
-   p0f | 296
+   
+   | Honeypot | total attacks |
+   | --- | --- |
+   | Dionaea |  > 14000 |
+   | Snort | 0 |
+   | Wordpot | 0 |
+   | Amun | 228 |
+   | p0f | 296 |
+   
    The most attacks 
    I've used mongoexpert to export data from the honeypots using the following command:
    <kbd><img src="export.png" width="900"></kbd><br />
