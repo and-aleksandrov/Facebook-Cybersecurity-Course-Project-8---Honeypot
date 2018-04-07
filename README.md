@@ -80,8 +80,8 @@
    <kbd><img src="snort.png" width="500"></kbd><br /> 
    In the admin panel I still had <br /> 
    <kbd><img src="zero.png" width="900"></kbd><br /> 
-   Later I've noticed that in the .json file there are actually some alerts for Snort Honeypot, so maybe it's just the admin panel bag. 
-   With the Wordpot there are no record in the .json file at all, even toghugh the vm seems to be running and can be scanned by nmap and WPScan
+   Later I've noticed that there are actually some alerts in the .json file for Snort Honeypot, so maybe it's just the admin panel bag. <br />
+   With the Wordpot there are no records in the .json file at all, even though the VM seems to be running normally and can be scanned by Nmap and WPScan
 
 ### 3. Summary of the data collected
 
