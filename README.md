@@ -114,6 +114,13 @@
    
    <kbd><img src="payloads.png" width="800"></kbd><br />
    
+   Here we can see the different types of scans. The most popular are: <br />
+   * ET SCAN SipCLI VOIP Scan
+   * ET DROP Dshield Block Listed Source group 1
+   * ET SCAN Suspicious inbound to MSSQL port 1433
+   * ET CINS Active Threat Intelligence Poor Reputation IP TCP group 3
+   * ET SCAN Suspicious inbound to MSSQL port 1433
+   
    
    I've used mongoexpert to export data from the honeypots using the following command:
    <kbd><img src="export.png" width="900"></kbd><br />
