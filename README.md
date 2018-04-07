@@ -94,11 +94,17 @@
    | Amun | 228 |
    | p0f | 296 |
    
+   The zero number of attacks is probably a result of a system bug as described above in the Issue section
+   
    The most attacks 
+   
    I've used mongoexpert to export data from the honeypots using the following command:
    <kbd><img src="export.png" width="900"></kbd><br />
-   ```
    
+   The .json file conteins the following information about the attacks, which inculdes protocol, port, ip address, honeypot name. timestamp, source port and identifier
+   
+   ```
+   { "_id" : { "$oid" : "5ac40df9616a1e77b1380124" }, "protocol" : "pcap", "hpfeed_id" : { "$oid" : "5ac40df6616a1e77b1380123" }, "timestamp" : { "$date" : "2018-04-03T23:27:50.399+0000" }, "source_ip" : "77.72.82.92", "source_port" : 45355, "destination_port" : 21958, "identifier" : "dd62dccc-36e1-11e8-bf4a-42010a800002", "honeypot" : "dionaea" }
    ```
 
 
