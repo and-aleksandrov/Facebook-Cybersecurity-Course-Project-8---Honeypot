@@ -16,19 +16,19 @@
    ```
    From the output we can notice the external ip address for access to the admin panel
    ```
-NAME         ZONE           MACHINE_TYPE  PREEMPTIBLE  INTERNAL_IP  EXTERNAL_IP    STATUS
-mhn-admin  us-central1-c  f1-micro                   10.128.0.6   35.184.64.139  RUNNING
+   NAME         ZONE           MACHINE_TYPE  PREEMPTIBLE  INTERNAL_IP  EXTERNAL_IP    STATUS
+   mhn-admin  us-central1-c  f1-micro                   10.128.0.6   35.184.64.139  RUNNING
    ```
 * After the set-up was complete I've installed the MHN Admin application
    ```
-$ gcloud compute ssh mhn-admin
-...
-$ sudo apt-get update
-$ sudo apt-get install git -y
-$ cd /opt
-$ sudo git clone https://github.com/RedolentSun/mhn.git
-$ cd mhn
-$ sudo ./install.sh
+   $ gcloud compute ssh mhn-admin
+  ...
+  $ sudo apt-get update
+  $ sudo apt-get install git -y
+  $ cd /opt
+  $ sudo git clone https://github.com/RedolentSun/mhn.git
+  $ cd mhn
+  $ sudo ./install.sh
    ```
 During the installation I was asked multiple configuration questions, answers were either no, or default
 
