@@ -109,10 +109,11 @@
    
    <kbd><img src="report2.png" width="800"></kbd><br />
    
-   The other Honeypot which got my attention by having the most numbers of payload is Snort
+   The other Honeypot which got my attention by having the most numbers of payload is Snort <br />
    <b>Payload</b> screenshot: 
    
-   <kbd><img src="report3.png" width="800"></kbd><br />
+   <kbd><img src="payloads.png" width="800"></kbd><br />
+   
    
    I've used mongoexpert to export data from the honeypots using the following command:
    <kbd><img src="export.png" width="900"></kbd><br />
