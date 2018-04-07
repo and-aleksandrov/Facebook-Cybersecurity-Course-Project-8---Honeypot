@@ -11,16 +11,16 @@
    $ gcloud beta compute firewall-rules create mhn-allow-admin --direction=INGRESS --priority=1000 --network=default --action=ALLOW -- rules=tcp:3000,tcp:10000 --source-ranges=0.0.0.0/0 --target-tags=mhn-admin
    ```
    Next step was to set up admin virtual machine:
-```
+   ```
    gcloud compute instances create "mhn-admin" --machine-type "f1-micro" --subnet "default" --maintenance-policy "MIGRATE"  --scopes "https://www.googleapis.com/auth/devstorage.read_only","https://www.googleapis.com/auth/logging.write","https://www.googleapis.com/auth/monitoring.write","https://www.googleapis.com/auth/servicecontrol","https://www.googleapis.com/auth/service.management.readonly","https://www.googleapis.com/auth/trace.append" --tags "mhn-admin","http-server","https-server" --image "ubuntu-1404-trusty-v20171010" --image-project "ubuntu-os-cloud" --boot-disk-size "10" --boot-disk-type "pd-standard" --boot-disk-device-name "mhn-admin"
-```
+   ```
    From the output we can notice the external ip address for access to the admin panel
-```
+   ```
 NAME         ZONE           MACHINE_TYPE  PREEMPTIBLE  INTERNAL_IP  EXTERNAL_IP    STATUS
 mhn-admin  us-central1-c  f1-micro                   10.128.0.6   35.184.64.139  RUNNING
-```
+   ```
 * After the set-up was complete I've installed the MHN Admin application
-```
+   ```
 $ gcloud compute ssh mhn-admin
 ...
 $ sudo apt-get update
@@ -29,7 +29,7 @@ $ cd /opt
 $ sudo git clone https://github.com/RedolentSun/mhn.git
 $ cd mhn
 $ sudo ./install.sh
-```
+   ```
 During the installation I was asked multiple configuration questions, answers were either no, or default
 
 * Next step was to create a honeypot VM itself
