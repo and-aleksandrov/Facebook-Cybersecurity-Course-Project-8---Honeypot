@@ -75,14 +75,20 @@
      - Amun
      - p0f
      
-2. Issues encountered
-   
+### 2. Issues encountered
+   Most of the honeypots we working normally, but for some reason ```Ubuntu-Wordpot``` and ```Ubuntu-Snort``` did not reflected any attacks in the admin panel, even though I've sucessfully used nmap attacks and WPscan myself
+   <kbd><img src="snort.png" width="500"></kbd><br /> 
+   In the admin panel I still had 
+   <kbd><img src="zero.png" width="500"></kbd><br /> 
+   Later I've noticed that in the .json file there are actually some alerts for Snort Honeypot, so maybe it's just the admin panel bag. 
+   With the Wordpot there are no record in the .json file at all, even toghugh the vm seems to be running and can be scanned by nmap and WPScan
+
+### 3. Summary of the data collected
+
 
    
-
-
-3. Summary of the data collected
+ 
 
 4. Any unresolved questions raised by the data collected
 
-
+   I was trying different combinations to locate the possibe malware using command like file, but there were no sufficient informatuon. It seems like for that period of time the machine was scanned, but never actualy tried to be exploited by malware
