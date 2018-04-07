@@ -66,29 +66,23 @@
    
 * To set up different types of honeypots I've repeated the last 3 steps except creating a firewall. I've replaced mhn-honeypot-1 with mhn-honeypot-2, mhn-honeypot-3 etc in the create instance command.
    When we go to the  ```mhn-admin``` admin panel using my ```35.184.64.139 ``` IP address and choose ```Sensors> View sensors``` we can see all deployed honeypots with details and the attack number
-   I've creted the following types of Honeypots:
+   
    <kbd><img src="sensors.png" width="800"></kbd><br /> 
-   
-
-   
-   
-
-
-
-
-
-
-I've repeted the 4 last actions for other honeypots, where I changed 
-
-
-
+   I've creted the following types of Honeypots:
+     - Dionaea
+     - Snort
+     - Wordpot
+     - Amun
+     - p0f
+     
 2. Issues encountered
+   
+
+   
+
 
 3. Summary of the data collected
 
 4. Any unresolved questions raised by the data collected
 
 
-1. First ordered list item
-2. Another item
-  * Unordered sub-list.
